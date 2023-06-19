@@ -146,6 +146,8 @@ alias tkr="toolkit run"
 alias tkt="toolkit test"
 alias tkd="toolkit data"
 alias tkbo="toolkit build offline"
+alias tkbor="toolkit build offline release_moe && toolkit run"
+alias dlf="docker logs -f"
 
 alias python="python3"
 alias gitb="git branch"

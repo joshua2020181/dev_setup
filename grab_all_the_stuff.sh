@@ -1,4 +1,7 @@
 cp ~/.bashrc .
 cp ~/.bash_aliases .
-cp ~/.config/tmux/tmux.conf ./.config/tmux/tmux.conf
-cp -r ~/.config/nvim/* ./.config/nvim/
+mkdir -p .config/tmux
+mkdir -p .config/nvim/lua
+cp ~/.config/tmux/tmux.conf .config/tmux/tmux.conf
+cp ~/.config/nvim/init.lua .config/nvim/
+cp -r ~/.config/nvim/lua/ .config/nvim/lua
