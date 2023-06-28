@@ -13,11 +13,12 @@ curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo 
 gh auth login
 
 # setup ssh key for github
-ssh-keygen -t ed25519 -C "josh.cheng.sh@gmail.com" -f ~/.ssh/id_ed25519 -N ""
-eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/id_ed25519
-gh ssh-key add ~/.ssh/id_ed25519.pub
-
+if [ ! -f "~/.ssh/id_ed25519"]; then
+  ssh-keygen -t ed25519 -C "josh.cheng.sh@gmail.com" -f ~/.ssh/id_ed25519 -N ""
+  eval "$(ssh-agent -s)"
+  ssh-add ~/.ssh/id_ed25519
+  gh ssh-key add ~/.ssh/id_ed25519.pub
+fi
 
 # install nvchad
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
@@ -35,5 +36,5 @@ sudo apt install xsel  # for clipboard support in tmux
 
 cp .config/tmux/tmux.conf ~/.config/tmux/tmux.conf
 cp .config/nvim/init.lua ~/.config/nvim/init.lua
-cp -r .config/nvim/lua ~/.config/nvim/lua
+cp -r .config/nvim/lua ~/.config/nvim/
 
