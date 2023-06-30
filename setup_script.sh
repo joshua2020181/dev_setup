@@ -40,3 +40,8 @@ cp .config/tmux/tmux.conf ~/.config/tmux/tmux.conf
 cp .config/nvim/init.lua ~/.config/nvim/init.lua
 cp -r .config/nvim/lua ~/.config/nvim/
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm  # tmux plugin manager
+
+# bashrc, copy over and backup
+cp ~/.bashrc ~/.bashrc.bak
+cp .bashrc ~/.bashrc
+source ~/.bashrc
