@@ -1,5 +1,7 @@
 cp ~/.bashrc .
 cp ~/.bash_aliases .
+cp ~/.zshrc .
+
 mkdir -p .config/tmux
 mkdir -p .config/nvim/lua
 cp ~/.config/tmux/tmux.conf .config/tmux/tmux.conf
