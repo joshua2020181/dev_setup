@@ -15,6 +15,9 @@ local sources = {
   formatting.black.with({
     extra_args = { "--line-length", "100" },
   }),
+
+  formatting.djlint,
+  lint.djlint,
 }
 
 null_ls.setup {

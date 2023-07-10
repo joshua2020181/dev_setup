@@ -1,7 +1,9 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
-
+if test -t 1; then
+    exec zsh
+fi
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -121,6 +123,8 @@ fi
 # set capslock to esc and ctrl
 setxkbmap -option ctrl:nocaps
 xcape -e 'Control_L=Escape'
+
+export PATH="$PATH:$HOME/.local/bin/"
 
 
 # KIWI MODIFICATIONS
