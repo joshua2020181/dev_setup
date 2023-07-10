@@ -15,12 +15,12 @@ curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo 
 gh auth login
 
 # setup ssh key for github
-if [ ! -f "~/.ssh/id_ed25519"]; then
-  ssh-keygen -t ed25519 -C "josh.cheng.sh@gmail.com" -f ~/.ssh/id_ed25519 -N ""
-  eval "$(ssh-agent -s)"
-  ssh-add ~/.ssh/id_ed25519
-  gh ssh-key add ~/.ssh/id_ed25519.pub
-fi
+# if [ ! -f "~/.ssh/id_ed25519"]; then
+  # ssh-keygen -t ed25519 -C "josh.cheng.sh@gmail.com" -f ~/.ssh/id_ed25519 -N ""
+  # eval "$(ssh-agent -s)"
+  # ssh-add ~/.ssh/id_ed25519
+  # gh ssh-key add ~/.ssh/id_ed25519.pub
+# fi
 
 # clone this repo
 git clone git@github.com:joshua2020181/dev_setup.git ~/dev_setup
