@@ -19,6 +19,16 @@ lspconfig.pyright.setup {
   },
 }
 
+lspconfig.tsserver.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  init_options = {
+    preferences = {
+      disableSuggestions = true,
+    }
+  }
+}
+
 --[[ local servers = { "pyright" }
 
 for _, lsp in ipairs(servers) do

@@ -14,6 +14,13 @@ M.general = {
     ["<C-k>"] = { "<cmd> TmuxNavigateUp<CR>", "window up"},
     ["<C-p>"] = { "<cmd> lua require('fzf-lua').files()<CR>", "fzf files"},
     ["<C-g>"] = { "<cmd> lua require('fzf-lua').lgrep_curbuf()<CR>", "fzf lgrep_curbuf"},
+
+    ["gl"] = {
+      function()
+        vim.diagnostic.open_float(0, {scope="line"})
+      end,
+      "view lsp message",
+    },
   }
 }
 
