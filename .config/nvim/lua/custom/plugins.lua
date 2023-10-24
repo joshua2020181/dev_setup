@@ -1,5 +1,9 @@
 local plugins = {
   {
+    "dstein64/vim-startuptime",
+    lazy = false,
+  },
+  {
     "christoomey/vim-tmux-navigator",
     lazy = false,
   },
@@ -24,6 +28,19 @@ local plugins = {
     config = function()
       require "plugins.configs.lspconfig"
       require "custom.configs.lspconfig"
+    end,
+  },
+  {
+    "kevinhwang91/promise-async",
+  },
+  {
+    "kevinhwang91/nvim-ufo",
+    lazy = false,
+    requires = {
+      "kevinhwang91/promise-async",
+    },
+    config = function()
+      require "custom.configs.ufo"
     end,
   }
 }

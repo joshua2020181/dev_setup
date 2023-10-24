@@ -3,6 +3,12 @@ local capabilities = require("plugins.configs.lspconfig").capabilities
 
 local lspconfig = require "lspconfig"
 
+capabilities.textDocument.foldingRange = {
+    dynamicRegistration = false,
+    lineFoldingOnly = true
+}
+
+
 lspconfig.pyright.setup {
   on_attach = on_attach,
   capabilities = capabilities,
@@ -13,7 +19,8 @@ lspconfig.pyright.setup {
         useLibraryCodeForTypes = true,
       },
       configFiles = {
-        "/home/joshua/kiwi/.pylintrc",
+        "/home/joshua/.config/personal/pyrightconfig.json",
+        -- "/home/joshua/kiwi/.pylintrc",
       }
     },
   },
