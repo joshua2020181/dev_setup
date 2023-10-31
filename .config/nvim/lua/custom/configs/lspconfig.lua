@@ -18,10 +18,10 @@ lspconfig.pyright.setup {
         autoSearchPaths = true,
         useLibraryCodeForTypes = true,
       },
-      configFiles = {
-        "/home/joshua/.config/personal/pyrightconfig.json",
-        -- "/home/joshua/kiwi/.pylintrc",
-      }
+      -- configFiles = {
+      --   "/home/joshua/.config/personal/pyrightconfig.json",
+      --   -- "/home/joshua/kiwi/.pylintrc",
+      -- }
     },
   },
 }

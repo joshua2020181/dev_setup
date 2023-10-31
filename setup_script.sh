@@ -28,10 +28,7 @@ sudo mv /tmp/win32yank.exe /usr/local/bin/
 
 
 # custom nvim and tmux
-
-cp .config/tmux/tmux.conf ~/.config/tmux/tmux.conf
-cp .config/nvim/init.lua ~/.config/nvim/init.lua
-cp -r .config/nvim/lua ~/.config/nvim/
+./copy_configs.sh
 git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm  # tmux plugin manager
 
 # bashrc, copy over and backup

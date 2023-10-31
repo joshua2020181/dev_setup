@@ -23,6 +23,7 @@ local sources = {
   -- lint.eslint.with({
   --   extra_args = { "--config", vim.fn.expand("~/.config/nvim/rc/.eslintrc.cjs") },
   -- }),
+  formatting.prettier,
   -- formatting.prettier.with({
   --   extra_args = { "--config", vim.fn.expand("~/.config/nvim/rc/.prettierrc.cjs") },
   -- }),
