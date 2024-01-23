@@ -122,7 +122,8 @@ alias nbrc="nano ~/.bashrc"
 alias sbrc="source ~/.bashrc"
 alias nvzrc="nvim ~/.zshrc"
 alias szrc="source ~/.zshrc"
-alias tmux="tmux -f $XDG_CONFIG_HOME/tmux/tmux.conf"
+alias tmux="tmux -f ~/.config/tmux/tmux.conf"
+
 
 alias edh="export DOCKER_HOST=\"192.168.2.100\" && echo DOCKER_HOST: \$DOCKER_HOST"
 alias uedh="export DOCKER_HOST=\"\" && echo DOCKER_HOST: \$DOCKER_HOST"
@@ -152,7 +153,6 @@ alias sshrm="ssh-keygen -f /home/joshua/.ssh/known_hosts -R "
 # Show git branch name
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source /opt/ros/noetic/setup.zsh
 
-export NVM_DIR="$HOME/.config/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+source $HOME/.cargo/env
